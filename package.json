@@ -1,5 +1,5 @@
 {
-  "name": "modern-js-template",
+  "name": "Battlship",
   "version": "1.0.0",
   "description": "Sets up the environment for web development projects that uses JS technology.",
   "main": "index.js",
@@ -8,10 +8,11 @@
     "build": "webpack --config webpack.prod.js",
     "lint": "eslint . --fix",
     "format": "prettier --write .",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "keywords": [],
-  "author": "",
+  "author": "Musab OD",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.27.7",
