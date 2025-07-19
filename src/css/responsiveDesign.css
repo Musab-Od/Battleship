@@ -1,0 +1,538 @@
+@media (max-width: 768px) {
+  /* Start Menu Mobile Adjustments */
+  .menu-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .menu-description {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .menu button {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  /* Form elements in menus */
+  .menu .form {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .menu .form label {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    display: block;
+    text-align: center;
+  }
+
+  .menu .form input {
+    width: 100%;
+    max-width: 280px;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .menu .form button {
+    width: 100%;
+    max-width: 200px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  /* Difficulty buttons - special handling for long text */
+  .menu button[id='easy'],
+  .menu button[id='hard'] {
+    font-size: 0.9rem;
+    padding: 1rem;
+    line-height: 1.2;
+    height: auto;
+    min-height: 60px;
+    white-space: normal;
+  }
+
+  /* Ship Placement Mobile Optimizations */
+  .ship-placement {
+    padding: 1rem;
+    gap: 1.5rem;
+    width: 95%;
+    max-width: none;
+  }
+
+  .ship-info {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .grid-container {
+    align-self: center;
+    overflow-x: auto;
+    padding: 0.5rem;
+  }
+
+  .grid-cell {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+  }
+
+  .controls button {
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  /* Game Screen Mobile Optimizations */
+  .game-container {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .game-info {
+    padding: 0.5rem;
+    margin: 0;
+  }
+
+  .game-info h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .boards-container {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .player-board,
+  .opponent-board {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .player-board h3,
+  .opponent-board h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  .board-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Rules Mobile Optimizations */
+  .rules-container {
+    padding: 1rem;
+  }
+
+  .rules-content {
+    padding: 1.5rem;
+  }
+
+  .rule-title {
+    font-size: 1.5rem;
+  }
+
+  .rule-description {
+    font-size: 1rem;
+  }
+
+  .nav-button {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .rule-navigation {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .rule-image-container {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    min-height: 150px;
+  }
+
+  .rule-image:not([src$='.png']):not([src$='.jpg']):not([src$='.jpeg']):not(
+      [src$='.gif']
+    ):not([src$='.webp']) {
+    width: 200px;
+    height: 120px;
+    font-size: 1rem;
+  }
+
+  .rules-container {
+    padding: 0.5rem;
+    min-height: auto;
+  }
+
+  .rules-content {
+    padding: 1rem;
+    margin: 0.5rem;
+    width: calc(100% - 1rem);
+    max-width: none;
+  }
+
+  .step-counter {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .rule-title {
+    font-size: 1.3rem;
+    margin: 0.8rem 0;
+    line-height: 1.2;
+  }
+
+  .rule-image-container {
+    margin: 1rem 0;
+    padding: 0.8rem;
+    min-height: 120px;
+  }
+
+  .rule-image {
+    max-height: 200px;
+  }
+
+  .rule-image:not([src$='.png']):not([src$='.jpg']):not([src$='.jpeg']):not(
+      [src$='.gif']
+    ):not([src$='.webp']) {
+    width: 180px;
+    height: 100px;
+    font-size: 0.9rem;
+  }
+
+  .rule-description {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 1rem 0;
+    padding: 0 0.5rem;
+  }
+
+  .rule-navigation {
+    flex-direction: column;
+    gap: 0.8rem;
+    margin: 1.5rem 0;
+  }
+
+  .nav-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  .progress-bar {
+    margin-top: 1.5rem;
+    height: 5px;
+  }
+}
+
+/* small screens */
+@media (max-width: 390px) {
+  .menu {
+    width: 95%;
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  .menu-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .menu-description {
+    font-size: 0.9rem;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+
+  .menu button {
+    padding: 0.9rem 1rem;
+    font-size: 0.95rem;
+    max-width: 280px;
+  }
+
+  .menu .form input {
+    max-width: 250px;
+    padding: 0.9rem;
+  }
+
+  .menu .form button {
+    max-width: 180px;
+    padding: 0.7rem 1rem;
+  }
+
+  /* Extra small difficulty buttons */
+  .menu button[id='easy'],
+  .menu button[id='hard'] {
+    font-size: 0.8rem;
+    padding: 0.8rem;
+    min-height: 55px;
+  }
+
+  /* Ship Placement - Extra Small Screens */
+  .ship-placement {
+    padding: 0.8rem;
+    gap: 1rem;
+  }
+
+  .grid-cell {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    min-height: 28px;
+  }
+
+  .ship-info {
+    font-size: 0.8rem;
+  }
+
+  .controls button {
+    padding: 0.7rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  /* Game Screen - Extra Small Screens */
+  .game-info h2 {
+    font-size: 1rem;
+  }
+
+  .boards-container {
+    gap: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  .player-board h3,
+  .opponent-board h3 {
+    font-size: 1rem;
+  }
+
+  #restart-game {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* iPad and larger tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .menu {
+    width: 60%;
+    max-width: 500px;
+    padding: 2rem;
+  }
+
+  .menu-title {
+    font-size: 2.2rem;
+  }
+
+  .menu-description {
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+
+  .menu button {
+    padding: 1.2rem 2rem;
+    font-size: 1.2rem;
+    max-width: 400px;
+  }
+
+  .menu .form input {
+    max-width: 350px;
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .menu .form button {
+    max-width: 250px;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+  }
+
+  /* Ship Placement - Tablet Optimizations */
+  .ship-placement {
+    width: 80%;
+    max-width: 600px;
+    padding: 2rem;
+  }
+
+  .grid-cell {
+    width: 45px;
+    height: 45px;
+  }
+
+  .controls {
+    flex-direction: row;
+    max-width: 500px;
+  }
+
+  /* Game Screen - Tablet Optimizations */
+  .boards-container {
+    flex-direction: row;
+    gap: 4rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .player-board,
+  .opponent-board {
+    max-width: 400px;
+  }
+
+  /* Ensure boards don't get too wide on tablets */
+  .grid-row {
+    justify-content: center;
+  }
+}
+
+/*larger tablets landscape */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .boards-container {
+    gap: 6rem;
+    flex-wrap: nowrap;
+  }
+
+  .ship-placement {
+    width: 60%;
+    max-width: 700px;
+  }
+
+  .grid-cell {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .menu button,
+  .nav-button {
+    min-height: 48px;
+    min-width: 48px;
+    position: relative;
+  }
+
+  .menu .form input {
+    min-height: 48px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  /* Add visual feedback for touch */
+  .menu button:active,
+  .nav-button:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+
+  .menu .form input:focus {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+  .grid-cell {
+    border: 1.5px solid rgba(221, 221, 220, 0.4);
+  }
+
+  .attackable {
+    position: relative;
+  }
+
+  /* .attackable::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background: var(--accent-red);
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: targetPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes targetPulse {
+    0%,
+    100% {
+      opacity: 0.3;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+  } */
+
+  .menu button,
+  .controls button,
+  .nav-button {
+    min-height: 44px; /* Ensures touch targets are large enough */
+  }
+}
+
+/* Landscape orientation adjustments for phones */
+@media (max-width: 768px) and (orientation: landscape) {
+  .title {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+  }
+
+  .ship-placement,
+  .game-container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .boards-container {
+    flex-direction: row;
+    gap: 2rem;
+    overflow-x: auto;
+    padding: 1rem 0.5rem;
+  }
+
+  .player-board,
+  .opponent-board {
+    flex-shrink: 0;
+    max-width: 300px;
+  }
+
+  .grid-cell {
+    width: 30px;
+    height: 30px;
+  }
+
+  .game-info {
+    padding: 0.5rem;
+  }
+
+  .game-info h2 {
+    font-size: 1rem;
+  }
+}

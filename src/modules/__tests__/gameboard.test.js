@@ -28,15 +28,6 @@ describe('Placing a ship on the board', () => {
     expect(gameboard.ships).toContain(ship);
   });
 
-  test('Ship placement fails if it goes out of bounds', () => {
-    const ship = new Ship(3);
-    const horizontalResult = gameboard.placeShip(ship, 0, 8, false); // Out horizontally
-    const verticalResult = gameboard.placeShip(ship, 8, 0, true); // Out vertically
-
-    expect(horizontalResult).toBe(false);
-    expect(verticalResult).toBe(false);
-  });
-
   test('Ship placement fails if it overlaps with another ship', () => {
     const ship1 = new Ship(3);
     const ship2 = new Ship(2);

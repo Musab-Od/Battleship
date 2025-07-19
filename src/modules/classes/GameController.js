@@ -1,4 +1,3 @@
-import Player from './Player.js';
 import Ship from './Ship.js';
 
 class GameController {
@@ -18,7 +17,7 @@ class GameController {
 
   shipPlacement(player, row = null, col = null, isVertical = false) {
     if (player.isAI) {
-      // AI logic to place ships randomly
+      // AI logic to place ships randomly (For testing purposes)
       player.gameboard.placeRandomly();
       return true;
     }
@@ -32,9 +31,10 @@ class GameController {
       if (this.currentShipIndex >= this.shipsToPlace.length) {
         this.placementPhase = false; // All ships placed, exit placement phase
         this.currentShipIndex = 0; // Reset for next player
-        return true;
       }
+      return true; // ← Ship was successfully placed!
     }
+
     return false; // Ship placement failed
   }
 

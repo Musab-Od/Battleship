@@ -1,0 +1,110 @@
+.ship-placement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background: rgba(221, 221, 220, 0.05);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.ship-info {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  font-size: 1rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.ship-info p span {
+  color: var(--accent-green);
+  text-shadow: 0 0 10px rgba(144, 238, 144, 0.3);
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.grid-row {
+  display: flex;
+}
+
+.grid-cell {
+  border: 1px solid rgba(221, 221, 220, 0.3);
+  width: 50px;
+  height: 50px;
+  transition: all 0.2s ease;
+  background: rgba(221, 221, 220, 0.05);
+  position: relative;
+}
+
+.grid-cell:hover {
+  background: rgba(144, 238, 144, 0.2);
+  box-shadow: inset 0 0 10px rgba(144, 238, 144, 0.3);
+}
+
+.grid-cell.ship-preview,
+.grid-cell.ship-placed {
+  background: linear-gradient(45deg, var(--accent-green), #7dd87d);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 2px 8px rgba(144, 238, 144, 0.3);
+}
+
+.controls {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.controls button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background: rgba(221, 221, 220, 0.1);
+  color: var(--primary-text);
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+}
+
+.controls button:hover {
+  background: var(--hover-bg);
+  color: var(--hover-text);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(221, 221, 220, 0.3);
+}
+
+#confirm-placements.disabled {
+  color: var(--accent-red);
+  border-color: var(--accent-red);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+#confirm-placements.disabled:hover {
+  background: rgba(255, 107, 107, 0.2);
+  color: var(--accent-red);
+  transform: none;
+}
+
+#confirm-placements {
+  color: var(--accent-green);
+  border-color: var(--accent-green);
+}
+
+#confirm-placements:hover {
+  background: rgba(144, 238, 144, 0.2);
+  color: var(--accent-green);
+  box-shadow: 0 0 20px rgba(144, 238, 144, 0.4);
+}

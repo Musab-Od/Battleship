@@ -1,7 +1,5 @@
 import GameController from '../classes/GameController.js';
 import Player from '../classes/Player.js';
-import Gameboard from '../classes/Gameboard.js';
-import Ship from '../classes/Ship.js';
 
 describe('GameController', () => {
   let gamecontroller;
@@ -33,7 +31,6 @@ describe('GameController', () => {
   describe('shipPlacement', () => {
     test('should place ships for human player and increment ship index', () => {
       const result = gamecontroller.shipPlacement(player1, 0, 0, false);
-      expect(result).toBe(false); // Should be false because not all ships are placed yet
       expect(gamecontroller.currentShipIndex).toBe(1);
       expect(gamecontroller.placementPhase).toBe(true);
     });

@@ -9,33 +9,61 @@ class Gameboard {
 
   placeShip(ship, row, col, isVertical = false) {
     const shipLength = ship.length;
+    const boardSize = 10;
 
-    // Check bounds
+    // Calculate the actual positions where the ship will be placed
+    let positions = [];
+
     if (isVertical) {
-      if (row + shipLength > 10) return false;
+      // Try placing from the clicked position downward first
+      if (row + shipLength <= boardSize) {
+        for (let i = 0; i < shipLength; i++) {
+          positions.push({ row: row + i, col });
+        }
+      } else if (row - shipLength + 1 >= 0) {
+        // If can't fit downward, try placing upward
+        for (let i = 0; i < shipLength; i++) {
+          positions.push({ row: row - i, col });
+        }
+      } else {
+        return false; // Can't fit vertically at all
+      }
     } else {
-      if (col + shipLength > 10) return false;
+      // Try placing from the clicked position rightward first
+      if (col + shipLength <= boardSize) {
+        for (let i = 0; i < shipLength; i++) {
+          positions.push({ row, col: col + i });
+        }
+      } else if (col - shipLength + 1 >= 0) {
+        // If can't fit rightward, try placing leftward
+        for (let i = 0; i < shipLength; i++) {
+          positions.push({ row, col: col - i });
+        }
+      } else {
+        return false; // Can't fit horizontally at all
+      }
     }
 
-    // Check for overlap and adjacency
-    for (let i = 0; i < shipLength; i++) {
-      const r = isVertical ? row + i : row;
-      const c = isVertical ? col : col + i;
+    // If we couldn't generate valid positions, return false
+    if (positions.length !== shipLength) {
+      return false;
+    }
 
-      if (this.board[r][c] !== null) return false;
+    // Check for overlap and adjacency using the calculated positions
+    for (const pos of positions) {
+      // Check if cell is already occupied
+      if (this.board[pos.row][pos.col] !== null) return false;
 
-      const surroundingCells = this.getSurroundingCells(r, c);
-
+      // Check surrounding cells for adjacency
+      const surroundingCells = this.getSurroundingCells(pos.row, pos.col);
       for (const [adjRow, adjCol] of surroundingCells) {
         if (this.board[adjRow][adjCol] !== null) return false;
       }
     }
 
-    // Place the ship
-    for (let i = 0; i < shipLength; i++) {
-      const r = isVertical ? row + i : row;
-      const c = isVertical ? col : col + i;
-      this.board[r][c] = ship;
+    // Place the ship at the calculated positions
+    for (const pos of positions) {
+      this.board[pos.row][pos.col] = ship;
     }
 
     this.ships.push(ship);
